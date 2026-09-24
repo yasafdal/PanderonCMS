@@ -6,6 +6,31 @@
     <CompressionEnabled>false</CompressionEnabled> <!-- Disable compression. E.g. for umbraco backoffice files. These files should be precompressed by node and not let dotnet handle it -->
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="umbraco\Logs\UmbracoTraceLog.EK-00392.20260923.json" />
+    <Content Include="umbraco\Logs\UmbracoTraceLog.EK-00392.20260924.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\segments.gen" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\segments_3" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\write.lock" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\_0.cfe" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\_0.cfs" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\_0.si" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\segments.gen" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\segments_3" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\write.lock" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\_0.cfe" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\_0.cfs" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\InternalIndex\_0.si" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\MembersIndex\segments.gen" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\MembersIndex\segments_q" />
+    <None Include="umbraco\Data\TEMP\ExamineIndexes\MembersIndex\write.lock" />
+    <None Include="umbraco\Data\TEMP\MainDom_20b8a6edf20e95bcecd83b67e181eed4aae3f013.lock" />
+    <Content Include="umbraco\Data\UmbracoDB.sqlite.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="umbraco\Data\UmbracoDB.sqlite.db-shm" />
+    <None Include="umbraco\Data\UmbracoDB.sqlite.db-wal" />
     <None Include="wwwroot\Content\Banner.png" />
   </ItemGroup>
 
@@ -44,6 +69,11 @@
   <ItemGroup>
     <!-- Keep the local appsettings.json override out of publish output -->
     <Content Update="appsettings.Local.json" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="umbraco\Data\TEMP\FileUploads\" />
+    <Folder Include="umbraco\Data\TEMP\TemporaryFile\" />
   </ItemGroup>
 
 

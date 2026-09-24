@@ -17,6 +17,26 @@
         body {
         font-family: 'Poppins', sans-serif;
         }
+
+        /* CUSTOM ANIMATION PARA SA GUMAGALAW NA BACKGROUND */
+        @@keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @@keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .animate-marquee {
+            animation: scroll-left 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+        .animate-marquee-reverse {
+            animation: scroll-right 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
     </style>
 </head>
 <body class="bg-[#faf9f6] text-gray-800">
@@ -60,320 +80,352 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="pt-24 pb-12 md:pt-32 md:pb-24 px-4 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8">
-        <div class="md:w-1/2 text-center md:text-left">
-            <h1 class="text-4xl md:text-6xl font-bold text-[#5c3826] leading-tight mb-4">
-                One bite. You'll understand.
-            </h1>
-            <p class="text-lg text-gray-600 mb-8">
-                Premium, handcrafted cookies baked fresh daily. Experience the rich flavors of our signature treats.
-            </p>
-            <a href="#contact" class="bg-[#5c3826] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#45291c] transition shadow-lg">
-                Send an Inquiry
-            </a>
-        </div>
-        <div class="md:w-1/2">
-            <img src="~/Content/Banner.png"
-                 alt="Panderon Cookies Banner"
-                 loading="lazy"
-                 class="w-full object-cover">
-        </div>
-    </section>
-
-    <!-- Full Menu Section -->
-    <section id="menu" class="scroll-mt-24 py-16 px-4 max-w-6xl mx-auto">
-        
-        <!-- Category 1: Signatures & Pastries -->
-        <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Signature Flavors & Pastries</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        
-            <!-- Cookie 1 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/web1clsoe_up_of_chocolate_chip_cookies._stacked_on_whi_07bc1482-455e-4c1a-969c-b0c7eaad50e1_3-720x720.jpg" alt="Chocolate Chip" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Classic Choco Chip</h3>
-                    <p class="text-gray-600 text-sm">Crispy edges, chewy centers, and loaded with premium chocolate chunks.</p>
-                </div>
-            </div>
-        
-            <!-- Cookie 2 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/red-velvet-white-chocolate-chip-cookies-2-720x540.jpg"
-                     alt="Red Velvet White Choco"
-                     loading="lazy"
-                     class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Red Velvet White Choco</h3>
-                    <p class="text-gray-600 text-sm">Rich cocoa and vanilla dough mixed with sweet white chocolate chips.</p>
-                </div>
-            </div>
-        
-            <!-- Cookie 3 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/matcha-white-chocolate-cookies-dsc_5105-1x1-1200.jpg" alt="Matcha White" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Matcha White</h3>
-                    <p class="text-gray-600 text-sm">Earthy premium matcha flavor perfectly balanced with sweet white chocolate.</p>
-                </div>
-            </div>
-
-            <!-- Product 4: Dubai Chewie Cookie -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/dubai-chewy-cookie-1.jpg" alt="Dubai Chewie Cookie" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Dubai Chewie Cookie</h3>
-                    <p class="text-gray-600 text-sm">Our trendy creation loaded with rich pistachio cream and roasted knafeh for that perfect crunch.</p>
-                </div>
-            </div>
-
-            <!-- Product 5: Brownies -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/fudgy-brownies2.jpg" alt="Fudgy Brownies" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Signature Fudgy Brownies</h3>
-                    <p class="text-gray-600 text-sm">Decadent, moist, and intensely chocolatey with that perfect signature crinkly top.</p>
-                </div>
-            </div>
-
-            <!-- Product 6: Flavored Pandesal -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/flavours-by-yna-pandesal-01-1.jpg" alt="Flavored Pandesal" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Premium Flavored Pandesal</h3>
-                    <p class="text-gray-600 text-sm">Soft, freshly baked pandesal infused with exciting local flavors like ube cheese and matcha.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Elegant Divider Line 1 -->
-        <div class="border-t-2 border-dashed border-gray-200 max-w-2xl mx-auto mb-16"></div>
-
-        <!-- Category 2: Coffee -->
-        <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Coffee</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            
-            <!-- Coffee 1 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/spanish-latte.png" alt="Iced Coffee" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Signature Spanish Iced Latte</h3>
-                    <p class="text-gray-600 text-sm">The perfect companion to our sweet treats. Brewed fresh using locally sourced beans.</p>
-                </div>
-            </div>
-
-            <!-- Coffee 2 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/classiccoffee_1000x.jpg" alt="Hot Americano" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Classic Americano</h3>
-                    <p class="text-gray-600 text-sm">Bold, smooth, and served hot. The classic match for any rich chocolate cookie.</p>
-                </div>
-            </div>
-
-            <!-- Coffee 3 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/258686-icedcaramelmacchiato-ddmps-4x3-104704-2effb74f7d504b8aa5fbd52204d0e2e5.jpg" alt="Iced Caramel" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Iced Caramel Macchiato</h3>
-                    <p class="text-gray-600 text-sm">Sweet, creamy, and topped with a rich caramel drizzle for that extra indulgence.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Elegant Divider Line 2 -->
-        <div class="border-t-2 border-dashed border-gray-200 max-w-2xl mx-auto mb-16"></div>
-
-        <!-- Category 3: Special Offers -->
-        <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Special Offers</h2>
-        <!-- Ginamit ang grid-cols-2 at max-w-4xl para malaki at maganda ang focus sa specials -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            
-            <!-- Special Offer 1 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/bundleoflovesmallbox_styled__33921.jpg" alt="Gift Box" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Premium Gift Box</h3>
-                    <p class="text-gray-600 text-sm">Make someone smile. Assorted cookies packed in our beautiful custom Panderon box.</p>
-                </div>
-            </div>
-
-            <!-- Special Offer 2 -->
-            <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
-                <img src="~/content/cookiecake2-768x1024.jpg" alt="Giant Cookie Cake" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Giant Cookie Cake</h3>
-                    <p class="text-gray-600 text-sm">Celebrate in a deliciously different way. Customizable cookie cakes for special occasions.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Gallery & Feedbacks -->
-    <section id="gallery" class="scroll-mt-24 py-16 bg-[#f7f4ef] px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Happy Cravings</h2>
-            
-            <!-- Gallery Images -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-                <img src="~/content/1.png" alt="Gallery 1" loading="lazy" class="rounded-lg w-full h-40 object-cover shadow">
-                <img src="~/content/2.png" alt="Gallery 2" loading="lazy" class="rounded-lg w-full h-40 object-cover shadow">
-                <img src="~/content/3.png" alt="Gallery 3" loading="lazy" class="rounded-lg w-full h-40 object-cover shadow">
-                <img src="~/content/4.png" alt="Gallery 4" loading="lazy" class="rounded-lg w-full h-40 object-cover shadow">
-                <img src="~/content/5.png" alt="Gallery 5" loading="lazy" class="rounded-lg w-full h-40 object-cover shadow">
-                <img src="~/content/6.png" alt="Gallery 6" loading="lazy" class="rounded-lg w-full h-40 object-cover shadow">
-            </div>
-
-            <!-- Feedbacks Grid -->
-            <h3 class="text-2xl font-bold text-[#5c3826] text-center mb-8">What Our Customers Say</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <!-- Feedback 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col justify-between border border-gray-100">
-                    <p class="text-gray-600 italic mb-6">"Honestly the best cookies I've had in the area! The packaging is beautiful, and the cookies are massive and gooey inside. Highly recommended!"</p>
-                    <div class="mt-auto font-bold text-[#5c3826]">- Maria S. via Facebook</div>
-                </div>
-
-                <!-- Feedback 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col justify-between border border-gray-100">
-                    <p class="text-gray-600 italic mb-6">"Sobrang sarap ng Dubai Chewie Cookie! Sulit na sulit ang bayad at siksik sa pistachio filling. Perfect pang-regalo kahit anong okasyon."</p>
-                    <div class="mt-auto font-bold text-[#5c3826]">- Juan D. via Instagram</div>
-                </div>
-
-                <!-- Feedback 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md flex flex-col justify-between border border-gray-100">
-                    <p class="text-gray-600 italic mb-6">"Perfect partner for my afternoon coffee. Ang lambot ng Red Velvet White Choco nila at hindi nakakaumay ang tamis. Will definitely order again!"</p>
-                    <div class="mt-auto font-bold text-[#5c3826]">- Anna L. via Facebook</div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section: Meet the Baker -->
-    <section id="about" class="scroll-mt-24 py-16 bg-white px-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <!-- Baker Image (Placeholder) -->
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
-                     alt="Meet the Baker behind Panderon"
-                     loading="lazy"
-                     class="rounded-2xl shadow-lg w-full h-[400px] object-cover">
-            </div>
-            
-            <!-- Story Content -->
+    <!-- HERO SECTION (Fixed Background Reveal) -->
+    <!-- Nilagyan natin ng sticky top-0, -z-10, at h-screen para nasa likod lang siya -->
+    <!-- Nag-add din ng pt-20 para hindi matakpan ng navbar ang content mo -->
+    <section id="hero" class="sticky top-0 -z-10 h-screen w-full flex items-center px-4 pt-20">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 w-full">
             <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#5c3826] mb-2">Meet the Baker</h2>
-                <p class="text-gray-600 leading-relaxed text-lg mb-4">
-                    It all started in a small kitchen with a simple dream: to find the perfect cookie recipe with the right amount of crisp on the outside, yet delightfully soft and chunky on the inside.
+                <h1 class="text-4xl md:text-6xl font-bold text-[#5c3826] leading-tight mb-4">
+                    One bite. You'll understand.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Premium, handcrafted cookies baked fresh daily. Experience the rich flavors of our signature treats.
                 </p>
-                <p class="text-gray-600 leading-relaxed text-lg">
-                    At first, these were just baked as gifts and treats for friends and family. But after countless requests for more, we decided to share this goodness with everyone. Today, every Panderon cookie is made with the same love, dedication, and premium ingredients as the very first day we baked them.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events & Occasions Section -->
-    <section id="events" class="scroll-mt-24 py-16 bg-white px-4 border-t border-gray-100">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-[#5c3826] mb-4">Make Your Events Sweeter</h2>
-            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
-                Make your celebrations even more special! Panderon accepts bulk orders and custom dessert packages tailored for all kinds of occasions.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Birthday Party -->
-                <div class="bg-[#f7f4ef] p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
-                    <!-- Icon -->
-                    <svg class="w-12 h-12 text-[#5c3826] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-1.5-.454zM12 9v2m0 4v2"></path>
-                    </svg>
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Birthday Parties</h3>
-                    <p class="text-gray-600 text-sm">Give your guests a treat they will never forget. Perfect for giveaways or dessert buffets.</p>
-                </div>
-
-                <!-- Corporate Events -->
-                <div class="bg-[#f7f4ef] p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
-                    <!-- Icon -->
-                    <svg class="w-12 h-12 text-[#5c3826] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Corporate Events</h3>
-                    <p class="text-gray-600 text-sm">Impress your clients and employees with premium artisanal cookies for meetings and corporate gifting.</p>
-                </div>
-
-                <!-- Special Occasions -->
-                <div class="bg-[#f7f4ef] p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
-                    <!-- Icon -->
-                    <svg class="w-12 h-12 text-[#5c3826] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                    </svg>
-                    <h3 class="text-xl font-bold text-[#5c3826] mb-2">Special Occasions</h3>
-                    <p class="text-gray-600 text-sm">Weddings, anniversaries, or family reunions—make every milestone sweeter with Panderon.</p>
-                </div>
-            </div>
-
-            <!-- Call to Action Button -->
-            <div class="mt-10">
-                <a href="#contact" class="inline-block bg-[#5c3826] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#45291c] transition shadow-md">
-                    Book Us for Your Event
+                <a href="#contact" class="bg-[#5c3826] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#45291c] transition shadow-lg inline-block">
+                    Send an Inquiry
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="scroll-mt-24 py-16 px-4 max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-8">Got Questions?</h2>
-        <div class="space-y-4">
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 class="font-bold text-[#5c3826] text-lg mb-2">How long do the cookies last?</h3>
-                <p class="text-gray-600">Our cookies are best consumed within 3-4 days at room temperature. You can also refrigerate them for up to a week!</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 class="font-bold text-[#5c3826] text-lg mb-2">Do you do bulk orders for events?</h3>
-                <p class="text-gray-600">Yes! We accept bulk orders for birthdays, weddings, and corporate events. Please send us a message 1-2 weeks in advance.</p>
+            <div class="md:w-1/2">
+                <img src="~/Content/Banner.png"
+                     alt="Panderon Cookies Banner"
+                     loading="lazy"
+                     class="w-full object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Contact & Maps Section -->
-    <section id="contact" class="scroll-mt-24 py-16 bg-white px-4 border-t border-gray-100">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
-            <!-- Contact Form (Dummy) -->
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold text-[#5c3826] mb-6">Get in Touch</h2>
-                <p class="text-gray-600 mb-6">Have a custom request or want to place an offline order? Drop us a line below or message us directly on our Facebook page.</p>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5c3826]">
-                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5c3826]">
-                    <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5c3826]"></textarea>
-                    <button type="button" class="bg-[#5c3826] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#45291c] transition w-full">Send Message</button>
-                </form>
-            </div>
-            <!-- Dummy Map -->
-            <div class="md:w-1/2">
-                <h3 class="text-xl font-bold text-[#5c3826] mb-4">Our Location</h3>
-                <div class="bg-gray-100 w-full h-64 md:h-80 rounded-xl flex items-center justify-center text-gray-500 mb-4 border border-gray-200">
-                    <!-- Placeholder for actual Google Maps iframe -->
-                    [ Google Maps iFrame will go here ]
+    <!-- ========================================== -->
+    <!-- CONTENT WRAPPER -->
+    <!-- Dito na nagsisimula ang solid container na sasakop sa lahat ng lower sections -->
+    <!-- Ginamit ang bg-[#faf9f6] (same sa body) para takpan ang hero ng buo -->
+    <main class="relative z-10 bg-[#faf9f6] shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        
+        <!-- Full Menu Section -->
+        <section id="menu" class="scroll-mt-24 py-16 px-4 max-w-6xl mx-auto">
+            
+            <!-- Category 1: Signatures & Pastries -->
+            <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Signature Flavors & Pastries</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Cookie 1 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/web1clsoe_up_of_chocolate_chip_cookies._stacked_on_whi_07bc1482-455e-4c1a-969c-b0c7eaad50e1_3-720x720.jpg" alt="Chocolate Chip" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Classic Choco Chip</h3>
+                        <p class="text-gray-600 text-sm">Crispy edges, chewy centers, and loaded with premium chocolate chunks.</p>
+                    </div>
                 </div>
-                <p class="text-gray-600"><strong class="text-[#5c3826]">Address:</strong> 123 Bakery Street, Sweet Town, PH</p>
-                <p class="text-gray-600"><strong class="text-[#5c3826]">Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM</p>
+            
+                <!-- Cookie 2 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/red-velvet-white-chocolate-chip-cookies-2-720x540.jpg"
+                         alt="Red Velvet White Choco"
+                         loading="lazy"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Red Velvet White Choco</h3>
+                        <p class="text-gray-600 text-sm">Rich cocoa and vanilla dough mixed with sweet white chocolate chips.</p>
+                    </div>
+                </div>
+            
+                <!-- Cookie 3 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/matcha-white-chocolate-cookies-dsc_5105-1x1-1200.jpg" alt="Matcha White" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Matcha White</h3>
+                        <p class="text-gray-600 text-sm">Earthy premium matcha flavor perfectly balanced with sweet white chocolate.</p>
+                    </div>
+                </div>
+
+                <!-- Product 4: Dubai Chewie Cookie -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/dubai-chewy-cookie-1.jpg" alt="Dubai Chewie Cookie" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Dubai Chewie Cookie</h3>
+                        <p class="text-gray-600 text-sm">Our trendy creation loaded with rich pistachio cream and roasted knafeh for that perfect crunch.</p>
+                    </div>
+                </div>
+
+                <!-- Product 5: Brownies -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/fudgy-brownies2.jpg" alt="Fudgy Brownies" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Signature Fudgy Brownies</h3>
+                        <p class="text-gray-600 text-sm">Decadent, moist, and intensely chocolatey with that perfect signature crinkly top.</p>
+                    </div>
+                </div>
+
+                <!-- Product 6: Flavored Pandesal -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/flavours-by-yna-pandesal-01-1.jpg" alt="Flavored Pandesal" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Premium Flavored Pandesal</h3>
+                        <p class="text-gray-600 text-sm">Soft, freshly baked pandesal infused with exciting local flavors like ube cheese and matcha.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#5c3826] text-white py-6 text-center">
-        <p>&copy; 2026 Panderon. All rights reserved.</p>
-    </footer>
+            <!-- Elegant Divider Line 1 -->
+            <div class="border-t-2 border-dashed border-gray-200 max-w-2xl mx-auto mb-16"></div>
 
+            <!-- Category 2: Coffee -->
+            <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Coffee</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Coffee 1 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/spanish-latte.png" alt="Iced Coffee" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Signature Spanish Iced Latte</h3>
+                        <p class="text-gray-600 text-sm">The perfect companion to our sweet treats. Brewed fresh using locally sourced beans.</p>
+                    </div>
+                </div>
+
+                <!-- Coffee 2 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/classiccoffee_1000x.jpg" alt="Hot Americano" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Classic Americano</h3>
+                        <p class="text-gray-600 text-sm">Bold, smooth, and served hot. The classic match for any rich chocolate cookie.</p>
+                    </div>
+                </div>
+
+                <!-- Coffee 3 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/258686-icedcaramelmacchiato-ddmps-4x3-104704-2effb74f7d504b8aa5fbd52204d0e2e5.jpg" alt="Iced Caramel" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Iced Caramel Macchiato</h3>
+                        <p class="text-gray-600 text-sm">Sweet, creamy, and topped with a rich caramel drizzle for that extra indulgence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elegant Divider Line 2 -->
+            <div class="border-t-2 border-dashed border-gray-200 max-w-2xl mx-auto mb-16"></div>
+
+            <!-- Category 3: Special Offers -->
+            <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-12">Special Offers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Special Offer 1 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/bundleoflovesmallbox_styled__33921.jpg" alt="Gift Box" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Premium Gift Box</h3>
+                        <p class="text-gray-600 text-sm">Make someone smile. Assorted cookies packed in our beautiful custom Panderon box.</p>
+                    </div>
+                </div>
+
+                <!-- Special Offer 2 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group">
+                    <img src="~/content/cookiecake2-768x1024.jpg" alt="Giant Cookie Cake" loading="lazy" class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Giant Cookie Cake</h3>
+                        <p class="text-gray-600 text-sm">Celebrate in a deliciously different way. Customizable cookie cakes for special occasions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gallery & Feedbacks (With Moving B&W Background) -->
+        <section id="gallery" class="scroll-mt-24 py-24 relative overflow-hidden bg-[#f7f4ef]">
+            <div class="absolute inset-0 z-0 flex flex-col justify-center gap-4 opacity-20 pointer-events-none">
+        
+                <!-- Row 1 -->
+                <div class="animate-marquee">
+                    <!-- Set 1 -->
+                    <img src="~/content/7777.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/22.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/33.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/44.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/1010.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/2222.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/5555.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <!--  -->
+                    <img src="~/content/7777.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/22.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                     <img src="~/content/1010.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/33.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/2222.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/44.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                     <img src="~/content/5555.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                </div>
+
+                <!-- Row 2 -->
+                <div class="animate-marquee-reverse">
+                    <!--  -->
+                    <img src="~/content/44.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                    <img src="~/content/66.jpg" class="w-64 h-48 object-cover rounded-xl mx-2" alt="Customer">
+                     <img src="~/content/6666.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                     <img src="~/content/1111.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/77.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/3333.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/88.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <!--  -->
+                    <img src="~/content/55.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/66.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/6666.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/1111.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/3333.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/1111.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                    <img src="~/content/22.jpg" class="w-64 h-48 object-cover rounded-xl mx-2 " alt="Customer">
+                </div>
+            </div>
+
+            <!-- FOREGROUND CONTENT -->
+            <div class="relative z-10 max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#5c3826] text-center mb-4">Happy Cravings</h2>
+                <h3 class="text-xl font-medium text-gray-700 text-center mb-16">What Our Customers Say</h3>
+        
+                <!-- Feedbacks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feedback 1 -->
+                    <div class="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col justify-between border border-gray-100 transform hover:-translate-y-1 transition duration-300">
+                        <p class="text-gray-600 italic mb-6">"Honestly the best cookies I've had in the area! The packaging is beautiful, and the cookies are massive and gooey inside. Highly recommended!"</p>
+                        <div class="mt-auto font-bold text-[#5c3826]">- Maria S. via Facebook</div>
+                    </div>
+
+                    <!-- Feedback 2 -->
+                    <div class="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col justify-between border border-gray-100 transform hover:-translate-y-1 transition duration-300">
+                        <p class="text-gray-600 italic mb-6">"Sobrang sarap ng Dubai Chewie Cookie! Sulit na sulit ang bayad at siksik sa pistachio filling. Perfect pang-regalo kahit anong okasyon."</p>
+                        <div class="mt-auto font-bold text-[#5c3826]">- Juan D. via Instagram</div>
+                    </div>
+
+                    <!-- Feedback 3 -->
+                    <div class="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg flex flex-col justify-between border border-gray-100 transform hover:-translate-y-1 transition duration-300">
+                        <p class="text-gray-600 italic mb-6">"Perfect partner for my afternoon coffee. Ang lambot ng Red Velvet White Choco nila at hindi nakakaumay ang tamis. Will definitely order again!"</p>
+                        <div class="mt-auto font-bold text-[#5c3826]">- Anna L. via Facebook</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section: Meet the Baker -->
+        <section id="about" class="scroll-mt-24 py-16 bg-white px-4">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <!-- Baker Image (Placeholder) -->
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
+                         alt="Meet the Baker behind Panderon"
+                         loading="lazy"
+                         class="rounded-2xl shadow-lg w-full h-[400px] object-cover">
+                </div>
+                
+                <!-- Story Content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#5c3826] mb-2">Meet the Baker</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-4">
+                        It all started in a small kitchen with a simple dream: to find the perfect cookie recipe with the right amount of crisp on the outside, yet delightfully soft and chunky on the inside.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        At first, these were just baked as gifts and treats for friends and family. But after countless requests for more, we decided to share this goodness with everyone. Today, every Panderon cookie is made with the same love, dedication, and premium ingredients as the very first day we baked them.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events & Occasions Section -->
+        <section id="events" class="scroll-mt-24 py-16 bg-white px-4 border-t border-gray-100">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-[#5c3826] mb-4">Make Your Events Sweeter</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Make your celebrations even more special! Panderon accepts bulk orders and custom dessert packages tailored for all kinds of occasions.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Birthday Party -->
+                    <div class="bg-[#f7f4ef] p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                        <svg class="w-12 h-12 text-[#5c3826] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-1.5-.454zM12 9v2m0 4v2"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Birthday Parties</h3>
+                        <p class="text-gray-600 text-sm">Give your guests a treat they will never forget. Perfect for giveaways or dessert buffets.</p>
+                    </div>
+
+                    <!-- Corporate Events -->
+                    <div class="bg-[#f7f4ef] p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                        <svg class="w-12 h-12 text-[#5c3826] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Corporate Events</h3>
+                        <p class="text-gray-600 text-sm">Impress your clients and employees with premium artisanal cookies for meetings and corporate gifting.</p>
+                    </div>
+
+                    <!-- Special Occasions -->
+                    <div class="bg-[#f7f4ef] p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                        <svg class="w-12 h-12 text-[#5c3826] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold text-[#5c3826] mb-2">Special Occasions</h3>
+                        <p class="text-gray-600 text-sm">Weddings, anniversaries, or family reunions—make every milestone sweeter with Panderon.</p>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="#contact" class="inline-block bg-[#5c3826] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#45291c] transition shadow-md">
+                        Book Us for Your Event
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="scroll-mt-24 py-16 px-4 max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#5c3826] text-center mb-8">Got Questions?</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-[#5c3826] text-lg mb-2">How long do the cookies last?</h3>
+                    <p class="text-gray-600">Our cookies are best consumed within 3-4 days at room temperature. You can also refrigerate them for up to a week!</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-[#5c3826] text-lg mb-2">Do you do bulk orders for events?</h3>
+                    <p class="text-gray-600">Yes! We accept bulk orders for birthdays, weddings, and corporate events. Please send us a message 1-2 weeks in advance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Maps Section -->
+        <section id="contact" class="scroll-mt-24 py-16 bg-white px-4 border-t border-gray-100">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+                <!-- Contact Form (Dummy) -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-[#5c3826] mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-6">Have a custom request or want to place an offline order? Drop us a line below or message us directly on our Facebook page.</p>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5c3826]">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5c3826]">
+                        <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5c3826]"></textarea>
+                        <button type="button" class="bg-[#5c3826] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#45291c] transition w-full">Send Message</button>
+                    </form>
+                </div>
+                <!-- Dummy Map -->
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold text-[#5c3826] mb-4">Our Location</h3>
+                    <div class="bg-gray-100 w-full h-64 md:h-80 rounded-xl flex items-center justify-center text-gray-500 mb-4 border border-gray-200">
+                        [ Google Maps iFrame will go here ]
+                    </div>
+                    <p class="text-gray-600"><strong class="text-[#5c3826]">Address:</strong> 123 Bakery Street, Sweet Town, PH</p>
+                    <p class="text-gray-600"><strong class="text-[#5c3826]">Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#5c3826] text-white py-6 text-center">
+            <p>&copy; 2026 Panderon. All rights reserved.</p>
+        </footer>
+
+    </main>
+    <!-- END OF CONTENT WRAPPER -->
     <!-- Safe Script for Mobile Menu -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
